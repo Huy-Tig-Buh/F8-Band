@@ -120,7 +120,7 @@ html{
 
 #slider {
     margin-top: 46px;
-    background: url('/F8_The-band-website/assets/img/slider/ny.jpg') top center / cover no-repeat;
+    background: url('/F8-Band/assets/img/slider/ny.jpg') top center / cover no-repeat;
     padding-top: 50%;
     position: relative;
 }
@@ -247,16 +247,18 @@ html{
 
 .place-list{
     margin: 32px -8px 0;
+    padding-bottom: 32px;
 }
 
 .place-item{
     float: left;
-    width: 33.3333333%;
+    width: 33.33333%;
     padding: 0 8px;
 }
 
 .place-img{
     width: 100%;
+    display: block;
 }
 
 .place-img:hover{
@@ -265,6 +267,8 @@ html{
 
 .place-body{
     background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
 }
 
 .place-heading{
@@ -272,18 +276,92 @@ html{
 }
 
 .place-time{
-
+    margin-top: 15px;
+    color: #757575;
 }
 
 .place-description{
-
+    margin-top: 15px;
+    line-height: 1.4;
 }
 
 .btn-buy-ticket{
-
+    color: #ccc;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin: 15px 0 0;
 }
 
+.btn-buy-ticket:hover{
+    background-color: #ccc;
+    color: #000;
+}
 
 /* #footer {
 
 }  */
+
+.modal{ 
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 300px;
+    position: relative;
+}
+
+header.modal-header {
+    display: flex;
+    background-color: #009688;
+    height: 130px;
+    font-size: 30px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+i.fa-regular.fa-briefcase.tickets {
+    margin-right: 16px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover{
+    opacity: 1;
+}
+
+.modal-body {
+    margin: 16px;
+}
+
+
+.modal-label{
+    display: block;
+    font-size: 15px;
+}
+
+.modal-input {
+    display: block;
+}
+
+
