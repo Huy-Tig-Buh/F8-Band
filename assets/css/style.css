@@ -332,7 +332,7 @@ header.modal-header {
     align-items: center;
 }
 
-i.fa-regular.fa-briefcase.tickets {
+i.ti-bag.modal-header {
     margin-right: 16px;
 }
 
