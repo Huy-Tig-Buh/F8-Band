@@ -9,10 +9,10 @@ html{
 }
 
 .clear{
-    clear: both;
+    clear: both !important;
 }
 .text-white{
-    color: #fff;
+    color: #fff !important;
 }
 /* 
 1. Làm từ ngoài vào trong
@@ -245,14 +245,14 @@ html{
 
 /* Place Section */
 
-.place-list{
-    margin: 32px -8px 0;
+.place-list {
+    margin: 0 -8px;
     padding-bottom: 32px;
 }
 
-.place-item{
+.place-item {
     float: left;
-    width: 33.33333%;
+    width: 31.333333%;
     padding: 0 8px;
 }
 
@@ -270,10 +270,10 @@ html{
     padding: 16px;
     font-size: 15px;
 }
-
+/* 
 .place-heading{
 
-}
+} */
 
 .place-time{
     margin-top: 15px;
@@ -292,11 +292,13 @@ html{
     padding: 11px 16px;
     display: inline-block;
     margin: 15px 0 0;
+    cursor: pointer;
 }
 
 .btn-buy-ticket:hover{
     background-color: #ccc;
     color: #000;
+    cursor: pointer;
 }
 
 /* #footer {
@@ -310,16 +312,22 @@ html{
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
 }
 
 .modal-container {
     background-color: #fff;
     width: 900px;
-    min-height: 300px;
+    max-width: calc(100% - 40px);
+    min-height: 200px;
     position: relative;
+    animation: modelFadeIn 0.5s;
 }
 
 header.modal-header {
@@ -350,10 +358,11 @@ i.ti-bag.modal-header {
     opacity: 1;
 }
 
-.modal-body {
+#modal-body {
     margin: 16px;
+    display: block;
+    box-sizing: inherit;
 }
-
 
 .modal-label{
     display: block;
@@ -362,6 +371,56 @@ i.ti-bag.modal-header {
 
 .modal-input {
     display: block;
+    border: 1px solid #ccc;
+    width: 98%;
+    padding: 8px;
+    font-size: 15px;
+    margin: 12px 0px 12px 0px;
 }
 
+#btn-ticket {
+    padding: 20px;
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
 
+#btn-ticket:hover {
+    padding: 20px;
+    width: 100%;
+    background-color: #ccc;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-ticket .modal-btn{
+    margin-left: 4px;
+}
+
+.modal-footer{
+    text-align: right;
+    padding: 10px 20px 20px 20px;
+}
+
+.modal-footer a{
+    color: #2196F3;
+}
+
+@keyframes modelFadeIn{
+    from{
+        opacity: 0.5;
+        transform: translateY(-123px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
