@@ -92,8 +92,8 @@
                             <li>November <span class="quantity">3</span> </li>
                         </ul>
                         <!-- Place List Section -->
-                        <div class="place-list">
-                            <div class="place-item">
+                        <div class="place-list row">
+                            <div class="col-third col">
                                 <img src="/F8-Band/assets/img/place/newyork.jpg" alt="New York" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">New York</h3>
@@ -102,7 +102,7 @@
                                     <button class="btn-buy-ticket js-buy-ticket">Buy Tickets</a>
                                 </div>
                             </div>
-                            <div class="place-item">
+                            <div class="col-third col">
                                 <img src="/F8-Band/assets/img/place/paris.jpg" alt="Paris" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">Paris</h3>
@@ -111,7 +111,7 @@
                                     <button class="btn-buy-ticket js-buy-ticket">Buy Tickets</a>
                                 </div>
                             </div>
-                            <div class="place-item">
+                            <div class="col-third col">
                                 <img src="/F8-Band/assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">San Francisco</h3>
@@ -133,8 +133,34 @@
                     <p class="section-subheading">
                         Fan? Drop a note!
                     </p>
-                    <p class="about-text">
-                    </p>
+                <div class="row">
+                    <div class="col col-half">
+                        <p><i class="fa-sharp fa-solid fa-location-dot icon-location"></i>Chicago, US</p>
+                        <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
+                        <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input id="quantity-modal" type="text" class="contact-input" placeholder="Message">
+                                </div>
+                                <div class="col col-half">
+                                    <input id="quantity-modal" type="text" class="contact-input" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input id="quantity-modal" type="text" class="contact-input" placeholder="Email">
+                            </div>
+                        </form>
+
+                        <!-- <div class="col-half">
+                        </div>
+                        <div class="col-half">
+                        </div> -->
+                    </div>
+                </div>
+                    <div class="clear"></div>
                 </div>
                 <!-- End Contact Section -->
             </div>
@@ -151,7 +177,7 @@
                     <i class="ti-bag modal-header"></i>
                     Tickets
                 </header>
-                <!-- Modal Body -->
+                <!-- Modal Section -->
                 <div id="modal-body">
                     <label for="quantity-modal" class="modal-label">
                         <i class="fa-solid fa-cart-shopping"></i>

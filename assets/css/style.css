@@ -17,6 +17,23 @@ html{
     color: #fff !important;
 }
 
+.row{
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.col{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half{
+    width: 49%;
+}
+
+.col-third{
+    width: 31.333%;
+}
 /* 
 1. Làm từ ngoài vào trong
 2. Làm từ trên xuống dưới
@@ -124,7 +141,7 @@ html{
 #slider {
     margin-top: 46px;
     background: url('/F8-Band/assets/img/slider/ny.jpg') top center / cover no-repeat;
-    padding-top: 50%;
+    padding-top: 40%;
     position: relative;
 }
 
@@ -238,7 +255,8 @@ html{
     float: right;
     background-color: #000;
     color: #fff;
-    margin: -1px 16px 0 0;
+    margin-top: -1px;
+    margin-right: 16px;
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -248,15 +266,13 @@ html{
 
 /* Place Section */
 
-.place-list {
-    margin: 0 -8px;
-    padding-bottom: 32px;
+.place-list  {
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
 
 .place-item {
-    float: left;
     width: 31.333333%;
-    padding: 0 8px;
 }
 
 .place-img{
@@ -304,10 +320,27 @@ html{
     cursor: pointer;
 }
 
+/* CONTACT SECTION */
+
+i.icon-location {
+    margin-right: 12px;
+}
+
+.body-contact .contact-input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin: 4px;
+    color: #000;
+    font-size: 15px;
+}
+
 /* #footer {
 
 }  */
 
+
+
+/* Modal */
 .modal{ 
     position: fixed;
     top: 0;
@@ -427,3 +460,6 @@ i.ti-bag.modal-header {
         transform: translateY(0);
     }
 }
+
+/* End Modal */
+
