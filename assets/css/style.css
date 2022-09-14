@@ -2,19 +2,27 @@
 *{
     padding: 0;
     margin: 0;
-    border-style: border-box;
+    box-sizing: border-box;
 }
 
 html{
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.clear{
-    clear: both;
 }
 
 .text-white{
     color: #fff !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
 }
 
 .row{
@@ -22,18 +30,48 @@ html{
     margin-left: -8px;
 }
 
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col{
     float: left;
-    padding: 0 8px;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 .col-half{
-    width: 49%;
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
 }
 
 .col-third{
-    width: 31.333%;
+    width: 33.333%;
 }
+
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin: 15px 0 0;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+
 /* 
 1. Làm từ ngoài vào trong
 2. Làm từ trên xuống dưới
@@ -174,7 +212,7 @@ html{
 #container .content-section
 {
     max-width: 800px;
-    padding: 64px 0px;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -208,11 +246,6 @@ html{
     Khi su dung Float Lop cha se khong bao quat duoc lop con */
 }
 
-#content .member-item{
-    float: left;
-    width: 33.3333%;
-}
-
 #content .member-name{
     font-size: 15px;
     text-align: center;
@@ -220,9 +253,8 @@ html{
 }
 
 #content .band-img{
-    width: 154px;
+    width: 100%;
     border-radius: 4px;
-    transform: translateX(55px);
 }
 
 /* Tour section */
@@ -268,7 +300,6 @@ html{
 
 .place-list  {
     margin-top: 32px;
-    margin-bottom: 48px;
 }
 
 .place-item {
@@ -304,40 +335,81 @@ html{
     line-height: 1.4;
 }
 
-.btn-buy-ticket{
-    color: #ccc;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin: 15px 0 0;
-    cursor: pointer;
-}
-
-.btn-buy-ticket:hover{
-    background-color: #ccc;
-    color: #000;
-    cursor: pointer;
-}
-
 /* CONTACT SECTION */
 
-i.icon-location {
-    margin-right: 12px;
+.contact-content{
+    margin-top: 48px;
 }
 
-.body-contact .contact-input{
-    padding: 8px;
-    border: 1px solid #ccc;
-    margin: 4px;
-    color: #000;
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
     font-size: 15px;
 }
 
-/* #footer {
+.contact-form .form-control{
+    padding: 8px;    
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Outline la duong vien cua input */
+    /* outline: 1px solid red; */
+}
 
-}  */
+.font-submit-btn{
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 8px 8px;
+    float: right;
+    cursor: pointer;
+}
+/* END - CONTACT SECTION */
 
+/* Map Section */
+.map-section img{
+    opacity: 0.8;
+    width: 100%;
+}
+
+/* Footer Section */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    background: #f1f1f1;
+} 
+
+#footer .socials-list{
+    font-size: 24px;
+}
+
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
+}
 
 
 /* Modal */
@@ -408,7 +480,7 @@ i.ti-bag.modal-header {
 .modal-input {
     display: block;
     border: 1px solid #ccc;
-    width: 98%;
+    width: 100%;
     padding: 8px;
     font-size: 15px;
     margin: 12px 0px 12px 0px;
@@ -463,3 +535,25 @@ i.ti-bag.modal-header {
 
 /* End Modal */
 
+/* Mobile & Tablet Media Query <=1024px*/
+@media only screen and (max-width: 64em) {
+    #container .content-section {
+        width: 800px;
+        max-width: 100%;
+        padding: 64px 0 112px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 16px;
+        padding-left: 16px;
+        }
+    }
+
+/* Mobile Media Query <740px*/
+@media only screen and (max-width:46.1875em){
+    
+}
+
+/* Tablet Media Query >=740px <1024px */
+@media only screen and (min-width:46.25em) and (max-width:63.9375em){
+    
+}
