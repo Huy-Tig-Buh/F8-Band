@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="./assets/img/icon/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.2-web/css/all.css">
     <!--[if lte IE 9]>
@@ -36,12 +37,17 @@
             </ul>
             <!-- End Nav -->
 
-            <!-- Begin  Search Button -->
+            <!-- Mobile Menu Button -->
+            <div id="mobile-menu" class="menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <!-- Search Button -->
             <div class="search-btn">
                 <i class="search-icon fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- End  Search Button -->
         </div>
+        <!-- Slider -->
         <div id="slider">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
@@ -64,15 +70,15 @@
                         We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <div class="member-list row">
-                        <div class="col col-third">
+                        <div class="mmember-list col col-third">
                             <p class="member-name">Name</p>
                             <img src="/F8-Band/assets/img/band/bandmember.jpg" alt="Band Image" class="band-img">
                         </div>
-                        <div class="col col-third">
+                        <div class="mmember-list col col-third">
                             <p class="member-name">Name</p>
                             <img src="/F8-Band/assets/img/band/bandmember.jpg" alt="Band Image" class="band-img">
                         </div>
-                        <div class="col col-third">
+                        <div class="mmember-list col col-third">
                             <p class="member-name">Name</p>
                             <img src="/F8-Band/assets/img/band/bandmember.jpg" alt="Band Image" class="band-img">
                         </div>
@@ -97,7 +103,7 @@
                         </ul>
                         <!-- Place List Section -->
                         <div class="place-list row">
-                            <div class="col-third col">
+                            <div class="mplace-list col-third col">
                                 <img src="/F8-Band/assets/img/place/newyork.jpg" alt="New York" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">New York</h3>
@@ -106,7 +112,7 @@
                                     <button class="btn js-buy-ticket">Buy Tickets</a>
                                 </div>
                             </div>
-                            <div class="col-third col">
+                            <div class="mplace-list col-third col">
                                 <img src="/F8-Band/assets/img/place/paris.jpg" alt="Paris" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">Paris</h3>
@@ -115,7 +121,7 @@
                                     <button class="btn js-buy-ticket">Buy Tickets</a>
                                 </div>
                             </div>
-                            <div class="col-third col">
+                            <div class="mplace-list col-third col">
                                 <img src="/F8-Band/assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
                                 <div class="place-body">
                                     <h3 class="place-heading">San Francisco</h3>
@@ -239,7 +245,36 @@
         modalContainer.addEventListener('click', function(event){
             event.stopPropagation()
         })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
 
+        // Dong / Mo Mobile Menu
+        mobileMenu.onclick = function(){
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed){
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Auto Close khi Click Item Menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                }else{
+                    header.style.height = null;
+                }
+            }
+        }
     </script>
 </body>
 </html>

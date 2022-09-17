@@ -99,20 +99,40 @@ html{
 } 
 
 /* Begin: CSS Search Button */
-
-#header .search-btn{
-    color: #fff;
+#header .menu-btn{
     float: right;
-    font-size: 20px;
-    line-height: 46px;
-    padding: 0px 19px;
-    cursor: pointer;
+    padding: 0 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .menu-btn,
+#header .search-btn{
+    float: right;
+    padding: 0 21px;    
 }
 
 #header .search-btn:hover{
+    cursor: pointer;
     background-color: #f44336;
 }
 
+#header .menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
 /* End: CSS Search Button */
 
 /* Begin: CSS Nav */
@@ -152,7 +172,7 @@ html{
     background-color: #ccc;
 }
 
-#nav> li:hover .subnav{
+#nav > li:hover .subnav{
     display: block;
 }
 
@@ -534,26 +554,3 @@ i.ti-bag.modal-header {
 }
 
 /* End Modal */
-
-/* Mobile & Tablet Media Query <=1024px*/
-@media only screen and (max-width: 64em) {
-    #container .content-section {
-        width: 800px;
-        max-width: 100%;
-        padding: 64px 0 112px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-right: 16px;
-        padding-left: 16px;
-        }
-    }
-
-/* Mobile Media Query <740px*/
-@media only screen and (max-width:46.1875em){
-    
-}
-
-/* Tablet Media Query >=740px <1024px */
-@media only screen and (min-width:46.25em) and (max-width:63.9375em){
-    
-}
