@@ -12,6 +12,20 @@
         padding-right: 16px;
         padding-left: 16px;
         }
+    .modal-container {
+        max-height: calc(100% - 20%);
+        max-width: calc(100% - 20%);
+    }
+
+    header.modal-header {
+        height: 60px;
+    }
+    .modal-footer {
+        padding: 8px 20px;
+    }
+    #btn-ticket {
+        padding: 12px;
+    }
     }
 
 /* Mobile Media Query <740px*/
@@ -52,6 +66,21 @@
     .mplace-list{
         width: 100%;
         margin-top: 16px;
+    }
+    .m-full-width,
+    .m-col-full{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 16px;
+    }
+    .m-mt-8{
+        margin-top: 8px;
+    }
+    .btn{
+        text-align: center;
+        -webkit-appearance: none;
+        appearance: none;
     }
 }
 
